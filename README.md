@@ -2,6 +2,10 @@
 
 In this project, we can convert currencies into Polish zl. or from Polish zl. to other currencies.
 
+#Link to app :
+
+https://vizter94.github.io/currency-conventer-react/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
