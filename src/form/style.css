@@ -25,3 +25,8 @@
   font-weight: bold;
   padding: 5px;
 }
+.button {
+  color: rgb(37, 14, 14);
+  background-color: #fdc287;
+  border: outset #ffa242;
+}

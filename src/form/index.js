@@ -47,7 +47,7 @@ export const Form = ({ calculateResult, result }) => {
           </label>
         </p>
         <p>
-          <button className="form_button">Przelicz</button>
+          <button className="button">Przelicz</button>
         </p>
         <Result result={result} />
       </fieldset>
@@ -102,7 +102,7 @@ export const FormPLN = ({
           </label>
         </p>
         <p>
-          <button className="form_button">Przelicz</button>
+          <button className="button">Przelicz</button>
         </p>
         <ResultPLN resultPLN={resultPLN} />
       </fieldset>
