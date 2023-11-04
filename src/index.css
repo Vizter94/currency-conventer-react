@@ -4,7 +4,10 @@
   box-sizing: inherit;
 }
 body {
+  background-color: black;
   background-image: url("theme.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #root {
   color: black;
