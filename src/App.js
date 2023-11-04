@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, FormPLN } from "./form";
+import { Form, FormPLN } from "./Form";
 import { currencies } from "./CurrencyTab";
 import { Time } from "./Time";
 import "./index.css";

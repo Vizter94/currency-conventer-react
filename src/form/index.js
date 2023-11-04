@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { currencies } from "../CurrencyTab";
-import { Result, ResultPLN } from "../result";
+import { Result, ResultPLN } from "../Result";
 
 import "./style.css";
 
