@@ -6,8 +6,8 @@
 body {
   background-color: black;
   background-image: url("theme.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+
+  background-size: cover;
 }
 #root {
   color: black;
