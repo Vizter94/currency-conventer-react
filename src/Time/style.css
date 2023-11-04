@@ -1,0 +1,10 @@
+.backgroundTime {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.time {
+  font-family: monospace;
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  background-color: #48d3a6;
+}

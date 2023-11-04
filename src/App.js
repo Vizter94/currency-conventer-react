@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, FormPLN } from "./form";
 import { currencies } from "./CurrencyTab";
+import { Time } from "./Time";
 import "./index.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
   };
   return (
     <div className="app">
+      <Time />
       <Form result={result} calculateResult={calculateResult} />
       <FormPLN resultPLN={resultPLN} calculateResultPLN={calculateResultPLN} />
     </div>
