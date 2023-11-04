@@ -17,7 +17,7 @@ export const Time = () => {
   return (
     <div className="backgroundTime">
       <div className="time">
-        Aktualny czas :{" "}
+        Aktualny czas:
         {date.toLocaleString(undefined, {
           weekday: "long",
           hour: "2-digit",
