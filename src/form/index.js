@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { currencies } from "../CurrencyTab";
 import { Result, ResultPLN } from "../Result";
-
-import "./style.css";
+import {
+  FormStyled,
+  FieldsetStyled,
+  SpanStyled,
+  LegendStyled,
+  ButtonStyled,
+} from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].short);
@@ -14,16 +19,15 @@ export const Form = ({ calculateResult, result }) => {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <fieldset className="fieldset">
-        <legend className="header">Przelicznik waluty ze złotówki</legend>
+    <FormStyled onSubmit={onSubmit}>
+      <FieldsetStyled>
+        <LegendStyled>Przelicznik waluty ze złotówki</LegendStyled>
         <p>
           <label>
-            <span className="labelText">Podaj kwotę :</span>
+            <SpanStyled>Podaj kwotę :</SpanStyled>
             <input
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
-              className="field"
               type="number"
               requiered
               step="0.01"
@@ -32,9 +36,8 @@ export const Form = ({ calculateResult, result }) => {
         </p>
         <p>
           <label>
-            <span className="labelText">Wybierz walutę :</span>
+            <SpanStyled>Wybierz walutę :</SpanStyled>
             <select
-              className="field"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
@@ -47,11 +50,11 @@ export const Form = ({ calculateResult, result }) => {
           </label>
         </p>
         <p>
-          <button className="button">Przelicz</button>
+          <ButtonStyled>Przelicz</ButtonStyled>
         </p>
         <Result result={result} />
-      </fieldset>
-    </form>
+      </FieldsetStyled>
+    </FormStyled>
   );
 };
 export const FormPLN = ({
@@ -69,16 +72,15 @@ export const FormPLN = ({
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <fieldset className="fieldset">
-        <legend className="header"> Przelicznik waluty na złotówkę </legend>
+    <FormStyled onSubmit={onSubmit}>
+      <FieldsetStyled>
+        <LegendStyled> Przelicznik waluty na złotówkę </LegendStyled>
         <p>
           <label>
-            <span className="labelText">Podaj kwotę : </span>
+            <SpanStyled>Podaj kwotę : </SpanStyled>
             <input
               value={amount}
               onChange={({ target }) => setAmountPLN(target.value)}
-              className="field"
               type="number"
               requiered
               step="0.01"
@@ -87,9 +89,8 @@ export const FormPLN = ({
         </p>
         <p>
           <label>
-            <span className="labelText">Wybierz walutę :</span>
+            <SpanStyled>Wybierz walutę :</SpanStyled>
             <select
-              className="field"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
@@ -102,10 +103,10 @@ export const FormPLN = ({
           </label>
         </p>
         <p>
-          <button className="button">Przelicz</button>
+          <ButtonStyled>Przelicz</ButtonStyled>
         </p>
         <ResultPLN resultPLN={resultPLN} />
-      </fieldset>
-    </form>
+      </FieldsetStyled>
+    </FormStyled>
   );
 };

@@ -1,22 +1,13 @@
 import { useState, useEffect } from "react";
-import "./style.css";
+import { ContainerStyled, TimeStyled } from "./styled";
+import { useCurrentDate } from "./useCurrentDate";
 
 export const Time = () => {
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    const intervalID = setInterval(() => {
-      setDate(new Date());
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalID);
-    };
-  }, []);
+  const date = useCurrentDate();
 
   return (
-    <div className="backgroundTime">
-      <div className="time">
+    <ContainerStyled>
+      <TimeStyled>
         Aktualny czas:
         {date.toLocaleString(undefined, {
           weekday: "long",
@@ -26,7 +17,7 @@ export const Time = () => {
           day: "numeric",
           month: "long",
         })}
-      </div>
-    </div>
+      </TimeStyled>
+    </ContainerStyled>
   );
 };

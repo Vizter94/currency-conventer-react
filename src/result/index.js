@@ -1,27 +1,21 @@
-import "./style.css";
+import { TextStyled } from "./styled";
 
 export const Result = ({ result }) => (
-  <p className="result">
+  <TextStyled>
     Wynik :&nbsp;
     {result !== undefined && (
       <>
-        <span className="amount">
-          {result.targetAmount.toFixed(2)}&nbsp; {result.currency}
-        </span>
+        {result.targetAmount.toFixed(2)}&nbsp; {result.currency}
       </>
     )}
-  </p>
+  </TextStyled>
 );
 
 export const ResultPLN = ({ resultPLN }) => (
-  <p className="result">
+  <TextStyled>
     Wynik :&nbsp;
     {resultPLN !== undefined && (
-      <>
-        <span className="amount">
-          {resultPLN.targetAmountPLN.toFixed(2)}&nbsp; PLN
-        </span>
-      </>
+      <>{resultPLN.targetAmountPLN.toFixed(2)}&nbsp; PLN</>
     )}
-  </p>
+  </TextStyled>
 );
