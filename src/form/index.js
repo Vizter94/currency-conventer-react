@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { currencies } from "../CurrencyTab";
+import { currencies } from "../Currencies";
 import { Result, ResultPLN } from "../Result";
 import {
   FormStyled,
