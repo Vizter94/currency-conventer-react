@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, FormPLN } from "./Form";
-import { currencies } from "./CurrencyTab";
+import { useRateData } from "./Currencies/useRateData";
+import { currencies } from "./Currencies";
 import { Time } from "./Time";
 import "./index.css";
 
@@ -8,8 +9,10 @@ function App() {
   const [result, setResult] = useState();
   const [resultPLN, setResultPLN] = useState();
 
+  const ratesData = useRateData();
+
   const calculateResult = (currency, amount) => {
-    const rate = currencies.find(({ short }) => short === currency).rate;
+    const rate = ratesData.rates[currency];
 
     setResult({
       sourceAmount: amount,
