@@ -1,39 +1,24 @@
-import { useState } from "react";
-import { Form, FormPLN } from "./Form";
-import { useRateData } from "./Currencies/useRateData";
-import { currencies } from "./Currencies";
+import { Form } from "./Form";
+
 import { Time } from "./Time";
 import "./index.css";
 
 function App() {
-  const [result, setResult] = useState();
-  const [resultPLN, setResultPLN] = useState();
+  //   const [resultPLN, setResultPLN] = useState();
+  // }
+  // const calculateResultPLN = (currency, amountPLN) => {
+  //   const rate = ratesData.find(({ short }) => short === currency).rate;
 
-  const ratesData = useRateData();
-
-  const calculateResult = (currency, amount) => {
-    const rate = ratesData.rates[currency];
-
-    setResult({
-      sourceAmount: amount,
-      targetAmount: amount / rate,
-      currency,
-    });
-  };
-  const calculateResultPLN = (currency, amountPLN) => {
-    const rate = currencies.find(({ short }) => short === currency).rate;
-
-    setResultPLN({
-      sourceAmountPLN: +amountPLN,
-      targetAmountPLN: amountPLN * rate,
-      currency,
-    });
-  };
+  //   setResultPLN({
+  //     sourceAmountPLN: +amountPLN,
+  //     targetAmountPLN: amountPLN * rate,
+  //     currency,
+  //   });
+  // };
   return (
     <div className="app">
       <Time />
-      <Form result={result} calculateResult={calculateResult} />
-      <FormPLN resultPLN={resultPLN} calculateResultPLN={calculateResultPLN} />
+      <Form />
     </div>
   );
 }
